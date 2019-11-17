@@ -116,6 +116,18 @@ public class FloatingVideoWidgetModule extends ReactContextBaseJavaModule {
         } else {
             promise.resolve(true);
         }
+    }
 
+    @ReactMethod
+    public void hasOverlayPermission(Promise promise) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            if(Settings.canDrawOverlays(this.reactContext)){
+                promise.resolve(true);
+            }
+            else {
+                promise.resolve(false);}
+        } else {
+            promise.resolve(true);
+        }
     }
 }
