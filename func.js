@@ -52,6 +52,10 @@ export async function requestOverlayPermission() {
     return await Widget.requestOverlayPermission();
 }
 
+export async function hasOverlayPermission() {
+    return await Widget.hasOverlayPermission();
+}
+
 /**
  * Play the video
  *
