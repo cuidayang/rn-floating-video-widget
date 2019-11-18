@@ -63,7 +63,7 @@ dependencies {
     // https://github.com/facebook/react-native/blob/0.61-stable/template/android/app/build.gradle#L192
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_module
-    implementation 'com.devbrackets.android:exomedia:4.3.0'	
+    implementation fileTree(dir: "libs", include: ["*.aar"])
 }
 
 def configureReactNativePom(def pom) {
